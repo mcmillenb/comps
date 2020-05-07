@@ -1,8 +1,11 @@
 {
-  "name": "@thanksd/comps",
+  "name": "@mcmillenb/comps",
   "version": "0.0.1",
   "description": "Vue components",
   "main": "src/index.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "jest"
   },
