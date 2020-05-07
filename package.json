@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/mcmillenb/comps/issues"
   },
-  "homepage": "https://github.com/mcmillenb/comps#readme"
+  "homepage": "https://github.com/mcmillenb/comps#readme",
+  "dependencies": {
+    "vue": "^3.0.0-beta.9"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
 }
