@@ -1,0 +1,23 @@
+{
+  "name": "@thanksd/comps",
+  "version": "0.0.1",
+  "description": "Vue components",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcmillenb/comps.git"
+  },
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "author": "Brian McMillen <brianmcmillen1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcmillenb/comps/issues"
+  },
+  "homepage": "https://github.com/mcmillenb/comps#readme"
+}
