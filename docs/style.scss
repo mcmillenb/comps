@@ -1,0 +1,17 @@
+body {
+  font-family: monospace;
+}
+
+p { font-size: 16px; }
+
+h1 {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+hr {
+  margin: 32px 24px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, black, olive, darkgreen);
+}
