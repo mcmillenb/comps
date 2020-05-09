@@ -1,5 +1,10 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { name, version } = require('../package.json');
+
 module.exports = {
-  title: 'Vue 3 Components',
+  styleguideDir: './docs/dist',
+  version,
+  title: name,
   defaultExample: true,
   usageMode: 'expand',
   require: [

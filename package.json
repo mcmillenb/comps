@@ -8,8 +8,10 @@
     "email": "brianmcmillen1@gmail.com"
   },
   "scripts": {
-    "serve": "vue-cli-service styleguidist --config ./docs/config.js",
+    "serve": "npm run docs",
     "build": "vue-cli-service build src/index.ts",
+    "docs": "vue-cli-service styleguidist --config ./docs/config.js --open",
+    "docs:build": "vue-cli-service styleguidist:build --config ./docs/config.js",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
