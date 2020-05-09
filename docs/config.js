@@ -11,5 +11,14 @@ module.exports = {
     './src/assets/css/main.scss',
     './docs/style.scss'
   ],
-  components: 'src/components/[A-Z]*.vue'
+  sections: [
+    {
+      name: 'UI Components',
+      components: 'src/components/[A-Z]*.vue'
+    },
+    {
+      name: 'Themes',
+      components: 'src/themes/[A-Z]*Theme.vue'
+    }
+  ]
 };
