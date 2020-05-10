@@ -2,11 +2,11 @@
   <div :class="css" :style="{ backgroundColor }">
     <div
       :class="`${css}__color`"
-      v-for="{ hex, key, label } in colors"
+      v-for="({ hex, name }, key) in colors"
       :key="key"
       :style="getStyle(hex)"
     >
-      <span>{{ label }}</span>
+      <span>{{ name }}</span>
       <span>#{{ hex.toUpperCase() }}</span>
     </div>
   </div>
@@ -14,13 +14,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Palette, Color } from './types';
 import { Component, Prop } from 'vue-property-decorator';
 import { invertColor } from './utils';
 
 @Component
 export default class Colors extends Vue {
-  @Prop({ default: () => [] })
-  public colors!: Themes.Color[];
+  @Prop()
+  public colors!: Palette;
 
   css = 'thx-util-colors'
 
@@ -30,8 +31,12 @@ export default class Colors extends Vue {
   }
 
   get backgroundColor(): string {
-    const color = this.colors.find(c => c.key === 'background');
-    return '#' + (color?.hex || 'ffffff');
+    const key = Object.keys(this.colors).find(key => key === 'background');
+    if (key) {
+      const color: Color = this.colors[key];
+      return '#' + (color?.hex || 'ffffff');
+    }
+    return '';
   }
 }
 </script>

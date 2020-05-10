@@ -7,7 +7,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Colors from './Colors.vue';
-import { GruvboxDark as themeColors } from './themes';
+import { GruvboxDark as paletteColors } from './palettes';
 import { Component } from 'vue-property-decorator';
 
 @Component({
@@ -16,6 +16,6 @@ import { Component } from 'vue-property-decorator';
 export default class GruvboxDarkTheme extends Vue {
   css = 'thx-theme-gruvbox-dark'
 
-  colors = themeColors
+  colors = paletteColors
 }
 </script>

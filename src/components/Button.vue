@@ -16,11 +16,10 @@ export default class Button extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/css/vars.scss';
-
 .thx-button {
-  background-color: $color-white;
-  border: .2rem solid $color-black;
+  background-color: var(--bg-color);
+  border: .2rem solid var(--black);
+  color: var(--text-color);
   min-width: 1rem;
   min-height: 1rem;
   padding: .5rem 1rem;
@@ -31,7 +30,7 @@ export default class Button extends Vue {
     outline: none;
 
     &:not([disabled]) {
-      background-color: rgba(0,0,0,.05);
+      background-color: var(--highlight);
     }
 
     &:active {
@@ -41,7 +40,7 @@ export default class Button extends Vue {
 
   &[disabled] {
     cursor: initial;
-    border-color: $color-gray;
+    border-color: var(--black);
   }
 }
 </style>
