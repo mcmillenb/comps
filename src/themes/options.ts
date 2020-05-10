@@ -26,7 +26,8 @@ export const ThemeOptions = [
   'warn-color',
   'bad-color',
   'link-color',
-  'accent-color'
+  'accent-color',
+  'highlight-color'
 ] as const;
 
 export const ThemeTypeOptions = [

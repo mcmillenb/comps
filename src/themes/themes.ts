@@ -9,7 +9,8 @@ export const GruvboxDark: Theme = {
   'warn-color': GruvboxDarkPalette.yellow,
   'bad-color': GruvboxDarkPalette.red,
   'link-color': GruvboxDarkPalette.blue,
-  'accent-color': GruvboxDarkPalette.magenta
+  'accent-color': GruvboxDarkPalette.magenta,
+  'highlight-color': GruvboxDarkPalette.brightWhite
 };
 
 const GruvboxLightPalette = palettes.GruvboxLight;
@@ -20,7 +21,8 @@ export const GruvboxLight: Theme = {
   'warn-color': GruvboxLightPalette.yellow,
   'bad-color': GruvboxLightPalette.red,
   'link-color': GruvboxLightPalette.blue,
-  'accent-color': GruvboxLightPalette.magenta
+  'accent-color': GruvboxLightPalette.magenta,
+  'highlight-color': GruvboxLightPalette.brightWhite
 };
 
 const themeTypes: ThemeTypes = {

@@ -24,6 +24,11 @@ export default class Theme extends Vue {
   get cssVars() {
     return Object.keys(this.theme).reduce((acc, key) => {
       acc[`--${key}`] = '#' + this.theme[key as ThemeOption]?.hex;
+      for (let i = 1; i < 11; i++) {
+        const alphaHex = (25 * i).toString(16);
+        acc[`--${key}-a${i}`] = acc[`--${key}`] + alphaHex;
+      }
+      console.log({ acc });
       return acc;
     }, {} as { [key: string]: string });
   }

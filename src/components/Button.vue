@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Component from 'vue-class-component';
+import { Component } from 'vue-property-decorator';
 
 @Component
 export default class Button extends Vue {
@@ -30,17 +30,18 @@ export default class Button extends Vue {
     outline: none;
 
     &:not([disabled]) {
-      background-color: var(--highlight);
+      background-color: var(--link-color);
+      color: var(--highlight-color);
     }
 
     &:active {
-      background-color: rgba(0,0,0,.1);
+      background-color: var(--link-color-a8);
     }
   }
 
   &[disabled] {
     cursor: initial;
-    border-color: var(--black);
+    opacity: .6;
   }
 }
 </style>
