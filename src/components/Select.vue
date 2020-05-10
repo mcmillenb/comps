@@ -50,6 +50,7 @@ export default class Select extends Vue {
 
 <style>
 .thx-select {
-  border: .1rem solid gold;
+  display: flex;
+  flex-direction: column;
 }
 </style>

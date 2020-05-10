@@ -4,8 +4,10 @@
     <h1>UI Theme</h1>
     <p>This is some example paragraph text for the theme that has been selected</p>
 
-    <thx-select label="Select Theme" v-model="themeType" :options="themeOptions"/>
-    <thx-button>Click Me</thx-button>
+    <div class="theme-md__ui-components">
+      <thx-select label="Select Theme" v-model="themeType" :options="themeOptions"/>
+      <thx-button>Click Me</thx-button>
+    </div>
   </thx-theme>
 </template>
 
@@ -31,6 +33,11 @@ export default {
 <style lang="scss">
 .theme-md {
   padding: 20px;
+}
+
+.theme-md__ui-components {
+  display: grid;
+  gap: 20px;
 }
 </style>
 ```
