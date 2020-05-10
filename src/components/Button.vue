@@ -41,7 +41,8 @@ export default class Button extends Vue {
 
   &[disabled] {
     cursor: initial;
-    opacity: .6;
+    color: var(--text-color-a5);
+    border-color: var(--text-color-a5)
   }
 }
 </style>
