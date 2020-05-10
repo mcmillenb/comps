@@ -8,6 +8,7 @@
 import Vue from 'vue';
 import themes from '../themes/themes';
 import { Prop, Component } from 'vue-property-decorator';
+import { ThemeOption } from '../themes/types';
 
 @Component
 export default class Theme extends Vue {
@@ -22,7 +23,7 @@ export default class Theme extends Vue {
 
   get cssVars() {
     return Object.keys(this.theme).reduce((acc, key) => {
-      acc[`--${key}`] = '#' + this.theme[key]?.hex;
+      acc[`--${key}`] = '#' + this.theme[key as ThemeOption]?.hex;
       return acc;
     }, {} as { [key: string]: string });
   }

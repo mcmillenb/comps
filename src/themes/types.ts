@@ -3,33 +3,38 @@ export interface Color {
   name: string;
 }
 
-export interface Palette {
-  black: Color;
-  brightBlack: Color;
-  blue: Color;
-  brightBlue: Color;
-  cyan: Color;
-  brightCyan: Color;
-  green: Color;
-  brightGreen: Color;
-  magenta: Color;
-  brightMagenta: Color;
-  red: Color;
-  brightRed: Color;
-  white: Color;
-  brightWhite: Color;
-  yellow: Color;
-  brightYellow: Color;
-  [key: string]: Color;
+export type PaletteOption =
+  'black' |
+  'brightBlack' |
+  'blue' |
+  'brightBlue' |
+  'cyan' |
+  'brightCyan' |
+  'green' |
+  'brightGreen' |
+  'magenta' |
+  'brightMagenta' |
+  'red' |
+  'brightRed' |
+  'white' |
+  'brightWhite' |
+  'yellow' |
+  'brightYellow';
+
+export type Palette = {
+  [key in PaletteOption]: Color;
 }
 
 export interface PaletteTypes {
   [key: string]: Palette;
 }
 
-export interface Theme {
-  'bg-color': Color;
-  [key: string]: Color;
+export type ThemeOption =
+  'bg-color' |
+  'text-color';
+
+export type Theme = {
+  [key in ThemeOption]: Color;
 }
 
 export interface ThemeTypes {
