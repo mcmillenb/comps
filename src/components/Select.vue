@@ -2,7 +2,7 @@
   <div :class="css">
     <label v-if="label" :for="uid">{{ label }}</label>
     <select :class="`${css}__select`" v-model="innerVal" :id="uid">
-      <option v-for="{ value, label } in options" :key="value" :value="value">
+      <option v-for="{ value, label } in formattedOptions" :key="value" :value="value">
         {{ label }}
       </option>
     </select>
@@ -29,10 +29,19 @@ export default class Select extends Vue {
   label!: string;
 
   @Prop({ default: () => [] })
-  options!: SelectOption[];
+  options!: SelectOption[] | string[];
 
   css = 'thx-select';
   uid = '';
+
+  get formattedOptions(): SelectOption[] {
+    if (typeof this.options[0] === 'string') {
+      const options = this.options as string[];
+      return options.map(o => ({ value: o, label: o }));
+    } else {
+      return this.options as SelectOption[];
+    }
+  }
 
   get innerVal() {
     return this.value;

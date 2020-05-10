@@ -1,6 +1,6 @@
 ```vue
 <template>
-  <div>
+  <theme-switcher type="GruvboxDark" >
     <h1>Button Example</h1>
     <thx-button @click="onClick">
       Click me
@@ -11,14 +11,15 @@
     <thx-button disabled>
       Click me
     </thx-button>
-  </div>
+  </theme-switcher>
 </template>
 
 <script>
+import ThemeSwitcher from '../themes/ThemeSwitcher';
 import ThxButton from './Button';
 
 export default {
-  components: { ThxButton },
+  components: { ThemeSwitcher, ThxButton },
   data() {
     return {
       count: 0

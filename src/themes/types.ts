@@ -1,42 +1,28 @@
+import { PaletteOptions, ThemeOptions, ThemeTypeOptions } from './options';
+
 export interface Color {
   hex: string;
   name: string;
 }
 
-export type PaletteOption =
-  'black' |
-  'brightBlack' |
-  'blue' |
-  'brightBlue' |
-  'cyan' |
-  'brightCyan' |
-  'green' |
-  'brightGreen' |
-  'magenta' |
-  'brightMagenta' |
-  'red' |
-  'brightRed' |
-  'white' |
-  'brightWhite' |
-  'yellow' |
-  'brightYellow';
+export type PaletteOption = typeof PaletteOptions[number];
 
 export type Palette = {
   [key in PaletteOption]: Color;
 }
 
-export interface PaletteTypes {
+export type PaletteTypes = {
   [key: string]: Palette;
 }
 
-export type ThemeOption =
-  'bg-color' |
-  'text-color';
+export type ThemeOption = typeof ThemeOptions[number];
 
 export type Theme = {
   [key in ThemeOption]: Color;
 }
 
-export interface ThemeTypes {
-  [key: string]: Theme;
+export type ThemeTypeOption = typeof ThemeTypeOptions[number];
+
+export type ThemeTypes = {
+  [key in ThemeTypeOption]: Theme;
 }

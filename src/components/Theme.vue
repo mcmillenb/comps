@@ -8,12 +8,12 @@
 import Vue from 'vue';
 import themes from '../themes/themes';
 import { Prop, Component } from 'vue-property-decorator';
-import { ThemeOption } from '../themes/types';
+import { ThemeOption, ThemeTypeOption } from '../themes/types';
 
 @Component
 export default class Theme extends Vue {
   @Prop({ required: true })
-  type!: string;
+  type!: ThemeTypeOption;
 
   css = 'thx-theme'
 

@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Palette, Color } from './types';
+import { Palette, PaletteOption, Color } from './types';
 import { Component, Prop } from 'vue-property-decorator';
 import { invertColor } from './utils';
 
@@ -33,7 +33,7 @@ export default class Colors extends Vue {
   get backgroundColor(): string {
     const key = Object.keys(this.colors).find(key => key === 'background');
     if (key) {
-      const color: Color = this.colors[key];
+      const color: Color = this.colors[key as PaletteOption];
       return '#' + (color?.hex || 'ffffff');
     }
     return '';
