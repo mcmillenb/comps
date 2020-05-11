@@ -17,9 +17,9 @@ export default class Button extends Vue {
 
 <style lang="scss" scoped>
 .thx-button {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, white);
   border: .2rem solid var(--text-color, black);
-  color: var(--text-color);
+  color: var(--text-color, black);
   min-width: 1rem;
   min-height: 1rem;
   padding: .5rem 1rem;
