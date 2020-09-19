@@ -67,5 +67,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcmillenb/comps.git"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/bundlers/vue@2.6.21"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
